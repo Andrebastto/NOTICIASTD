@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>BM NOTÍCIAS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>BM NOTÍCIAS</h1>
+            <nav>
+                <a href="SUPORTE.HTML" id="btnSuporte">Acessar Suporte</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="noticiasContainer" class="news-section">
+            <!-- As notícias serão carregadas dinamicamente aqui -->
+        </section>
+
+        <section id="formSugestao" class="suggestion-form">
+            <h2>Sugerir uma Notícia</h2>
+            <form id="formSugestaoNoticias">
+                <label for="NOME">NOME:</label>
+                <input type="text" id="NOME" placeholder="NOME" required>
+                
+                <label for="conteudoSugestao">SUGESTÃO/CONTEÚDO:</label>
+                <textarea id="conteudoSugestao" placeholder="Conteúdo da sugestão" required></textarea>
+                
+                <button type="submit">Enviar Sugestão</button>
+            </form>
+        </section>
+
+        <section id="sugestoesContainer" class="suggestions-section">
+            <h2>Notícias Sugeridas</h2>
+            <!-- As sugestões serão carregadas dinamicamente aqui -->
+        </section>
+
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Notícias Online</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        listarNoticias();
+    </script>
+</body>
+</html>
