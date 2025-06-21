@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Suporte - Gerenciar Notícias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gerenciar Notícias</h1>
+            <nav>
+                <a href="index.html">Página Inicial</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Cadastrar Nova Notícia</h2>
+            <form id="formCadastro">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" placeholder="Título" required>
+                
+                <label for="conteudo">Conteúdo:</label>
+                <textarea id="conteudo" placeholder="Conteúdo da notícia" required></textarea>
+                
+                <label for="foto">Carregar Foto:</label>
+                <input type="file" id="foto" accept="image/*">
+                
+                <label for="video">URL do Vídeo:</label>
+                <input type="url" id="video" placeholder="URL do Vídeo (opcional)">
+                
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+
+        <section class="form-section">
+            <h2>Editar Notícia</h2>
+            <form id="formEditar">
+                <label for="tituloAtual">Título Atual:</label>
+                <input type="text" id="tituloAtual" placeholder="Título atual da notícia" readonly>
+                
+                <label for="novoTitulo">Novo Título:</label>
+                <input type="text" id="novoTitulo" placeholder="Novo título (opcional)">
+                
+                <label for="novoConteudo">Novo Conteúdo:</label>
+                <textarea id="novoConteudo" placeholder="Novo conteúdo (opcional)"></textarea>
+                
+                <label for="novaFoto">Nova Foto:</label>
+                <input type="file" id="novaFoto" accept="image/*">
+                
+                <label for="novoVideo">Novo URL do Vídeo:</label>
+                <input type="url" id="novoVideo" placeholder="Novo URL do vídeo (opcional)">
+                
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </section>
+
+        <section id="noticiasSuporteContainer" class="news-section">
+            <h2>Notícias Publicadas</h2>
+            <!-- As notícias serão carregadas dinamicamente aqui -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gerenciador de Notícias</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        listarNoticiasSuporte();
+        
+    </script>
+</body>
+</html>
